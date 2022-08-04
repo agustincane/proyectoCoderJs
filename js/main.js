@@ -52,6 +52,20 @@ function anadirAlCarrito(objetoProducto) {
   productosEnCarrito.push(objetoProducto);
   localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
   renderizarProductosEnCarro();
+
+  // Toastify añadido
+  Toastify({
+    text: 'Producto añadido',
+    duration: 3000,
+    gravity: 'bottom',
+    position: 'center',
+    style: {
+      background: 'linear-gradient(to right, #0BAB64, #3BB78F)'
+
+
+    }
+  }).showToast();
+
 }
 
 
@@ -81,4 +95,13 @@ function borrarDelCarro(id){
   localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
   renderizarProductosEnCarro();
 }
+
+// -- Toastify -- //
+
+/* function anadirAlCarrito(){
+  Toastify({
+    text: 'Probando toast!',
+    duration: 3000,
+  }).showToast();
+} */
 
