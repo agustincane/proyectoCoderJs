@@ -22,49 +22,85 @@
 <body>
     <!-- HEADER -->
     <header class="header">
+
+        <!-- Header Superior -->
         <div class="header__content container">            
-                <a class="header__logo" href="index.html"><img src="img/logo-header-baterias-canevello.svg" alt="Logo Baterías Canevello"></a>
-                <div class="header__datos">
-                    <div class="header__horarios">
+            <a class="header__logo" href="index.html"><img src="img/logo-header-baterias-canevello.svg" alt="Logo Baterías Canevello"></a>
+            <a class="header__logo--mobile" href="index.html"><img src="img/logo-horizontal-header-baterias-canevello.svg" alt="Logo Baterías Canevello"></a>
+
+            <div class="header__datos">
+                <div class="header__horarios">
+                    <div class="header__horarios--texto">
                         <p>Lunes a Viernes:<br>
                         8 a 12: 30 y 14:30 a 18:30 hs</p>
                         <p>Sábado: 8 a 12: 30 hs</p>
                     </div>
-                    <div class="header__divisor"></div>
-                    <div class="header__contacto">
-                        <p class="header__direccion">Av. Urquiza 1770</p>
-                        <p class="header__telefono">(2284) 422005</p>
-                        <p class="header__whatsapp">(2284) 15523212</p>
-                    </div>                   
+                    <div class="header__horarios--icono">
+                        <img src="img/clock.png" alt="Ícono horarios">
+                     </div>
                 </div>
+
+                <div class="header__divisor"></div>
+                    
+                <div class="header__contacto">
+                    <div class="header__direccion">
+                        <p>Av. Urquiza 1770</p>
+                        <img src="img/location.png" alt="Ícono horarios">
+                    </div>
+                    <div class="header__telefonos">
+                        <div class="header__fijo">
+                            <p>(2284) 422005</p><img src="img/phone.png" alt="Ícono Teléfono Fijo">
+                        </div>
+                        <div class="header__whatsapp">
+                            <p>(2284) 15523212</p><img src="img/whatsapp.png" alt="Ícono WhatsApp">
+                        </div>
+                            
+                    </div>
+                </div>                   
+            </div>
         </div>
-        <div class="header__barra">
+
+        <!-- Header Menú -->
+        <div class="header__menu">
             <nav class="header__nav container">
                 <ul class="header__list">
-                    <li class="header__item"><a href="#">Nosotros</a></li>
-                    <li class="header__item"><a href="#">Servicios</a></li>
+                    <li class="header__item"><a href="nosotros.html">Nosotros</a></li>
+                    <li class="header__item"><a href="servicios.html">Servicios</a></li>
                     <li class="header__item"><a href="tienda.html">Productos</a></li>
                 </ul>
-                <a href="#" class="header__cart">Carrito</a>
+                <div class="header__hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="carrito.html" class="header__cart">
+                    <div>
+                        <img src="img/cart.png" alt="Carrito de compras">
+                        <p>Carrito</p>
+                    </div>
+                </a>
             </nav>
         </div>
+
+        <!-- Header Portada -->
         <div class="header__portada">
             <div class="header__portada--fondo container">
-                <h1><mark>Más de 70 años en la ciudad</mark><br><mark><span>de Olavarría y alrededores</span></mark></h1>
+                <h1 class="header__h1--desktop"><mark>Más de 70 años en la ciudad</mark><br><mark><span>de Olavarría y alrededores</span></mark></h1>
+                <h1 class="header__h1--mobile"><mark>Más de 70 años en</mark><br><mark>la ciudad de Olavarría</mark><br><mark>y alrededores</mark></h1>
                 <div class="header__botones">
-                    <a href="tienda.html" class="header__btn header__btn--tienda">Tienda</a>
-                    <a href="#" class="header__btn">Contacto</a>
+                    <a href="tienda.html" class="header__btn">Tienda</a>
+                    <a href="contacto.html" class="header__btn">Contacto</a>
                 </div>
             </div>
         </div>      
         <!-- <a href="" class="header__carrito">Carrito</a> -->
     </header>
 
-    <a href="#" class="whatsapp__btn"><img src="img/whatsapp-icon.svg" alt=""></a>
+    <a href="https://api.whatsapp.com/send?phone=2284523212" class="whatsapp__btn"><img src="img/whatsapp-icon.svg" alt=""></a>
     
     <!-- MAIN INICIO -->
     <main class="main">
-        <h1>Sección Lubricentro</h1>
+        <h1>Nuestros Productos</h1>
         <div id="contenedor-productos" class="main__content container">
                     
         </div>
@@ -74,9 +110,7 @@
         <div id="contenedor-carrito" class="carrito__contenedor container">            
         </div>
     </section>
-    <section class="carousel">
 
-    </section>
     <footer class="footer">
         <div class="footer__content container">
             <a href="http://jacdiseno.com/"><img src="img/jac-logo-blanco.svg" alt="Logo JAC WEB"></a>

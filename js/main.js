@@ -1,14 +1,24 @@
+// Menú
+
+const hamburger = document.querySelector(".header__hamburger");
+const navMenu = document.querySelector(".header__list");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
 // Array de Listado de Productos
 
 let productos = [
-  {id: 1, nombre: "Aceite Total 5000", cantidad: 1, precio: 5000, img: 'img/item-total-5000.jpg'},
-  {id: 2, nombre: "Aceite Total 7000", cantidad: 1, precio: 7000, img: 'img/item-total-7000.jpg'},
-  {id: 3, nombre: "Aceite Total 9000", cantidad: 1, precio: 9000, img: 'img/item-total-9000.jpg'},
-  {id: 4, nombre: "Aceite Total 7000", cantidad: 1, precio: 5000, img: 'img/item-total-7000.jpg'},
-  {id: 5, nombre: "Aceite Total 5000", cantidad: 1, precio: 5000, img: 'img/item-total-5000.jpg'},
-  {id: 6, nombre: "Aceite Total 7000", cantidad: 1, precio: 7000, img: 'img/item-total-7000.jpg'},
-  {id: 7, nombre: "Aceite Total 9000", cantidad: 1, precio: 9000, img: 'img/item-total-9000.jpg'},
-  {id: 8, nombre: "Aceite Total 7000", cantidad: 1, precio: 5000, img: 'img/item-total-7000.jpg'},
+  {id: 1, nombre: "Batería Moura 12MVA 7", cantidad: 1, precio: 8000, img: 'img/item-moura-12-7-vrla.jpg'},
+  {id: 2, nombre: "Batería Moura M22ED", cantidad: 1, precio: 25000, img: 'img/item-moura-m22ed.jpg'},
+  {id: 3, nombre: "Batería Moura M22GD", cantidad: 1, precio: 27500, img: 'img/item-moura-m22gd.jpg'},
+  {id: 4, nombre: "Batería Moura M26AD", cantidad: 1, precio: 32000, img: 'img/item-moura-m26ad.jpg'},
+  {id: 5, nombre: "Batería Moura M30LD", cantidad: 1, precio: 35000, img: 'img/item-moura-m30ld.jpg'},
+  {id: 6, nombre: "Aceite Total 5000", cantidad: 1, precio: 5000, img: 'img/item-total-5000.jpg'},
+  {id: 7, nombre: "Aceite Total 7000", cantidad: 1, precio: 7500, img: 'img/item-total-7000.jpg'},
+  {id: 8, nombre: "Aceite Total 9000", cantidad: 1, precio: 10000, img: 'img/item-total-9000.jpg'}
 ]
 
 // Array de Productos en Carrito
@@ -82,7 +92,7 @@ function renderizarProductosEnCarro() {
                 </div>
                 `
   }
-  
+ 
   document.getElementById('contenedor-carrito').innerHTML = aux;
 }
 
@@ -95,6 +105,7 @@ function borrarDelCarro(id){
   localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
   renderizarProductosEnCarro();
 }
+
 
 // -- Toastify -- //
 
